@@ -29,7 +29,16 @@ appleCounter(obj3); // => 3
 ***********************************************************************/
 
 function appleCounter(appleObj) {
-  // Your code here 
+    const wordToCount = 'apple';
+    const keys = Object.keys(appleObj);
+    let count = 0;
+
+    for (let i = 0; i < keys.length; i++) {
+      if (keys[i].toLowerCase().includes(wordToCount)) {
+          count++
+      }
+    }
+    return count;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
